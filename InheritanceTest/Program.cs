@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace InheritanceTest
 {
@@ -7,7 +8,7 @@ namespace InheritanceTest
         static void Main(string[] args)
         {
             var fooLists = new List<FooModel>();
-            var barLists = new List<BarModel>();
+            var barLists = new Collection<BarModel>();
 
             var service = new Service();
 

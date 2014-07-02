@@ -7,7 +7,15 @@ namespace InheritanceTest
     {
         public void DoSomethingWith<T>(IEnumerable<T> list) where T : IModel<IModelItem>
         {
-            Debug.WriteLine(list);
+            foreach (var model in list)
+            {
+                Debug.WriteLine(model.Name);
+
+                foreach (var item in model.Items)
+                {
+                    Debug.WriteLine(item.Name);
+                }
+            }
         }
     }
 }

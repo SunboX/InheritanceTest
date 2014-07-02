@@ -4,12 +4,23 @@ namespace InheritanceTest
 {
     class BarModel : IModel<BarModelItem>
     {
+        private readonly List<BarModelItem> _items;
+
         public BarModel()
         {
-            Items = new List<BarModelItem>();
+            _items = new List<BarModelItem>();
         }
 
         public string Name { get; set; }
-        public IEnumerable<BarModelItem> Items { get; set; }
+
+        public IEnumerable<BarModelItem> Items
+        {
+            get { return _items; }
+        }
+
+        public void AddItem(BarModelItem item)
+        {
+            _items.Add(item);
+        }
     }
 }

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Runtime.ConstrainedExecution;
 
 namespace InheritanceTest
 {
@@ -7,13 +9,36 @@ namespace InheritanceTest
     {
         static void Main(string[] args)
         {
-            var fooLists = new List<FooModel>();
-            var barLists = new Collection<BarModel>();
+            var fooList = new List<FooModel>();
+            var fooItem = new FooModelItem()
+            {
+                Name = "Foo item 1"
+            };
+            var fooModel = new FooModel()
+            {
+                Name = "Foo List"
+            };
+            fooModel.AddItem(fooItem);
+            fooList.Add(fooModel);
+
+            var barList = new ObservableCollection<BarModel>();
+            var barItem = new BarModelItem()
+            {
+                Name = "Bar item 1"
+            };
+            var barModel = new BarModel()
+            {
+                Name = "Bar List"
+            };
+            barModel.AddItem(barItem);
+            barList.Add(barModel);
 
             var service = new Service();
 
-            service.DoSomethingWith(fooLists);
-            service.DoSomethingWith(barLists);
+            service.DoSomethingWith(fooList);
+            service.DoSomethingWith(barList);
+
+            Console.ReadLine();
         }
     }
 }

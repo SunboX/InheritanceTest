@@ -2,10 +2,10 @@
 
 namespace InheritanceTest
 {
-    interface IModel<T> where T : IModelItem
+    interface IModel<out T> where T : IModelItem
     {
         string Name { get; set; }
 
-        IEnumerable<T> Items { get; set; }
+        IEnumerable<T> Items { get; }
     }
 }

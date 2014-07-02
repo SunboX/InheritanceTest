@@ -1,1 +1,6 @@
 C:\Work\InheritanceTest\InheritanceTest\obj\Debug\InheritanceTest.csprojResolveAssemblyReference.cache
+C:\Projects\InheritanceTest\InheritanceTest\obj\Debug\InheritanceTest.csprojResolveAssemblyReference.cache
+C:\Projects\InheritanceTest\InheritanceTest\bin\Debug\InheritanceTest.exe
+C:\Projects\InheritanceTest\InheritanceTest\bin\Debug\InheritanceTest.pdb
+C:\Projects\InheritanceTest\InheritanceTest\obj\Debug\InheritanceTest.exe
+C:\Projects\InheritanceTest\InheritanceTest\obj\Debug\InheritanceTest.pdb
